@@ -8,16 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="bx-login">
+    <form action="" method="post" class="bx-login">
         <figure class="bx-login__figure">
             <img src="./public/img/user.png" alt="user">
         </figure>
         <h1 class="bx-login__bienvenido">Bienvenido</h1>
+        <?php
+            include "server/conexion.php";
+            include "server/controlador.php";
+        ?>
         <input placeholder="Usuario" class="bx-login__input" name="usuario" type="text">
         <input placeholder="Contraseña" class="bx-login__input" name="clave" type="password   ">
         <a href="#" class="bx-login__passfix">Olvidé Contraseña</a>
-        <button type="submit" class="bx-login__btn-login">INICIAR SESION</button>
+        <input type="submit" class="bx-login__btn-login" name="btningresar" value="INICIAR SESION">
         <a href="#" class="bx-login__register">Registrarse</a>
-    </section>
+    </form>
 </body>
 </html>
