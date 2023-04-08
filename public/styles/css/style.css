@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* Tipografía */
+/* Parrafos */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Se establece 1rem como 10px*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("../../img/background.svg");
+  background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #292c35;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+  /* opcional Background */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: #292c35;
+  color: #fff;
+}
+
+::selection {
+  background-color: #5643ff;
+  color: #fff;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  hyphens: none;
+  font-family: inherit;
+  font-size: inherit;
+  /*background-color: transparent;
+  */
+  color: inherit;
+  display: block;
+  /*opcional*/ /*-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+*/
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+    display: inline;
+    width: initial;
+  } */
+/* Configuramos la tipografía para toda la web */
+.bx-login {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 8px auto;
+  padding: 16px 24px;
+  align-self: center;
+  background: rgba(255, 0, 225, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.bx-login__input {
+  width: 90%;
+  margin: 8px;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #fff;
+}
+.bx-login__figure {
+  margin: auto;
+  width: 60px;
+}
+.bx-login__bienvenido {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  font-size: 3.5rem;
+}
+.bx-login__passfix {
+  color: #74767b;
+}
+.bx-login__btn-login {
+  display: block;
+}
+.bx-login__passfix {
+  width: 100%;
+  margin: 6px auto;
+}
+.bx-login__btn-login {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(255, 97, 242);
+  --btn-bg-2: rgb(199, 31, 255);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  margin: 8px 0;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(234, 71, 255, 0.5), 0px 5px 5px -1px rgba(221, 58, 233, 0.25), inset 4px 4px 8px rgba(250, 175, 255, 0.5), inset -4px -4px 8px rgba(216, 19, 209, 0.35);
+}
+.bx-login__btn-login:hover {
+  background-position: right top;
+}
+.bx-login__btn-login:is(:focus, :focus-within, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+.bx-login__register {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
