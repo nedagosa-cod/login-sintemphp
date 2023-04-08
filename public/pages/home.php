@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (empty($_SESSION['id'])){
+        header("location: ../../index.php");
+    };
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenido a tu cuenta</h1>
+    <h1>Bienvenido a tu cuenta
+        <?php
+            echo $_SESSION['nombre']." ".$_SESSION['apellido'];
+        ?>
+    </h1>
+    <a href="../../server/controlador_cerrar_sesion.php">SALIR</a>
 </body>
 </html>

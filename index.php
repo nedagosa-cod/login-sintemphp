@@ -15,7 +15,7 @@
         <h1 class="bx-login__bienvenido">Bienvenido</h1>
         <?php
             include "server/conexion.php";
-            include "server/controlador.php";
+            include "server/controlador_login.php";
         ?>
         <input placeholder="Usuario" class="bx-login__input" name="usuario" type="text">
         <input placeholder="Contraseña" class="bx-login__input" name="clave" type="password   ">
